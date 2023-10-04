@@ -1,9 +1,11 @@
 <script>
 import Button from "primevue/button"
+import PieceTimeLine from '../components/PieceTimeLine.vue'
 
 export default {
   components: {
-    Button
+    Button,
+    PieceTimeLine
   }
 }
 </script>
@@ -13,9 +15,10 @@ export default {
     <h1>Welcome to <span class="colored-title">Dev Steps</span></h1>
     <h2>Leave one piece of advice you wish you had heard from your present self?</h2>
     <div class="buttons-container">
-      <Button label="Create piece" rounded/>
-      <Button label="Check my pieces" severity="secondary" rounded />
+      <Button label="Create piece" rounded outlined />
+      <Button label="Check my pieces" severity="secondary" rounded outlined />
     </div>
+    <PieceTimeLine />
   </main>
 </template>
 
