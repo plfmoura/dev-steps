@@ -7,9 +7,9 @@ import Navigation from './components/Navigation.vue';
   <header>
     <Navigation />
   </header>
+
   <RouterView />
 </template>
 
 <style scoped>
-
 </style>
