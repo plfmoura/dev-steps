@@ -2,6 +2,10 @@
 bug:
 - '*'
 
+labels:
+- label: "WIP"
+  title: "^WIP:.*"
+  
 # Add '@domain/core' label to any change within the 'core' package
 '@domain/core':
 - package/core/**
