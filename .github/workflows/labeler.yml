@@ -21,11 +21,11 @@ jobs:
           const title = github.context.payload.pull_request.title;
           const labelsToAdd = [];
 
-          if (title.includes('bug')) {
+          if (title && title.includes('bug')) {
             labelsToAdd.push('bug');
           }
 
-          if (title.includes('feature')) {
+          if (title && title.includes('feature')) {
             labelsToAdd.push('enhancement');
           }
 
