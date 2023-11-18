@@ -15,8 +15,10 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
                             neque quas!
                         </p>
-                        <Button style="margin-top: 1rem;" label="Read more" rounded severity="help" outlined></Button>
-                        <Button icon="pi pi-heart" severity="help" rounded outlined aria-label="Favorite" />
+                        <div class="align-card-actions">
+                            <Button label="Read more" rounded severity="info" outlined></Button>
+                            <Button icon="pi pi-heart" severity="help" rounded outlined aria-label="Favorite" />
+                        </div>
                     </template>
                 </Card>
             </template>
@@ -53,6 +55,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.align-card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
 @media screen and (max-width: 960px) {
     ::v-deep(.customized-timeline) {
         .p-timeline-event:nth-child(even) {
