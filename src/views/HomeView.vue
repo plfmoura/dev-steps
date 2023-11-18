@@ -27,6 +27,15 @@ export default {
     <div class="buttons-container">
       <Button label="Create piece" rounded outlined @click="showAddPieceModal = true" />
       <Button label="Check my pieces" severity="secondary" rounded outlined />
+      <Button label="Check my pieces" severity="secondary" rounded outlined />
+      <Button label="Check my pieces" severity="secondary" rounded outlined />
+      <Button label="Check my pieces" severity="secondary" rounded outlined />
+      <Button label="Check my pieces" severity="secondary" rounded outlined />
+      <Button label="Check my pieces" severity="secondary" rounded outlined />
+      <Button label="Check my pieces" severity="secondary" rounded outlined />
+      <Button label="Check my pieces" severity="secondary" rounded outlined />
+      <Button label="Check my pieces" severity="secondary" rounded outlined />
+      <Button label="Check my pieces" severity="secondary" rounded outlined />
     </div>
     <PieceTimeLine />
   </main>

@@ -1,6 +1,0 @@
-label:
-  - name: bug
-    if: contains(github.event.pull_request.title, 'bug')
-
-  - name: enhancement
-    if: contains(github.event.pull_request.title, 'feature')
