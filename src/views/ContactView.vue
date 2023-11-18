@@ -8,21 +8,6 @@
         <h1>hello contact view</h1>
         <h1>hello contact view</h1>
         <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
-        <h1>hello contact view</h1>
     </div>
 </template>
 <script>
