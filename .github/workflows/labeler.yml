@@ -18,7 +18,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const title = github.context.payload.pull_request.title;
+          const title = github.context.payload.pull_request?.title;
           const labelsToAdd = [];
 
           if (title && title.includes('bug')) {
@@ -29,9 +29,11 @@ jobs:
             labelsToAdd.push('enhancement');
           }
 
-          await github.issues.addLabels({
-            owner: github.context.repo.owner,
-            repo: github.context.repo.repo,
-            issue_number: github.context.payload.pull_request.number,
-            labels: labelsToAdd,
-          });
+          if (labelsToAdd.length > 0) {
+            await github.issues.addLabels({
+              owner: github.context.repo.owner,
+              repo: github.context.repo.repo,
+              issue_number: github.context.payload.pull_request.number,
+              labels: labelsToAdd,
+            });
+          }
