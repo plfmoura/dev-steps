@@ -5,6 +5,10 @@ bug:
 WIP:
 - title: "^WIP:.*"
   
+feature:
+- label: "enhancement"
+  title: "^feature:.*"
+
 # Add '@domain/core' label to any change within the 'core' package
 '@domain/core':
 - package/core/**
