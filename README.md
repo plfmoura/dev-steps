@@ -1,5 +1,7 @@
 # dev-steps
 
+[![Pull Request Labeler](https://github.com/plfmoura/dev-steps/actions/workflows/labeler.yml/badge.svg?event=label)](https://github.com/plfmoura/dev-steps/actions/workflows/labeler.yml)
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
