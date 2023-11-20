@@ -20,15 +20,15 @@ jobs:
 
           if [[ $TITLE == *'fix'* ]]; then
             echo "Applying 'fix' label"
-            gh pr edit --add-labels fix
+            gh pr edit --add-label fix
           fi
 
           if [[ $TITLE == *'enhancement'* ]]; then
             echo "Applying 'enhancement' label"
-            gh pr edit --add-labels enhancement
+            gh pr edit --add-label enhancement
           fi
 
           if [[ $TITLE == *'wip'* ]]; then
             echo "Applying 'WIP' label"
-            gh pr edit --add-labels WIP
+            gh pr edit --add-label WIP
           fi
