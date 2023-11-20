@@ -1,5 +1,0 @@
-version: 1
-appendOnly: true
-labels:
-- label: "WIP"
-  title: "^WIP:.*"

@@ -1,0 +1,34 @@
+name: Auto Label PR
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set labels
+        run: |
+          TITLE=$(echo "${{ github.event.pull_request.title }}" | tr '[:upper:]' '[:lower:]')
+
+          if [[ $TITLE == *'fix'* ]]; then
+            echo "Applying 'fix' label"
+            gh pr edit --add-labels fix
+          fi
+
+          if [[ $TITLE == *'enhancement'* ]]; then
+            echo "Applying 'enhancement' label"
+            gh pr edit --add-labels enhancement
+          fi
+
+          if [[ $TITLE == *'wip'* ]]; then
+            echo "Applying 'WIP' label"
+            gh pr edit --add-labels WIP
+          fi
