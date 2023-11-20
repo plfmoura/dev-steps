@@ -1,9 +1,5 @@
-WIP:
-- title: "^WIP:.*"
-
-bug:
-- title: "bug:.*"
-
-enhancement: 
-  - title: "feat.*"
-
+version: 1
+appendOnly: true
+labels:
+- label: "WIP"
+  title: "^WIP:.*"
