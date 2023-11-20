@@ -14,6 +14,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Set up GitHub CLI
+        run: |
+          echo "Setting up GitHub CLI"
+          echo "gh version $(gh --version)"
+          gh auth login --with-token $GITHUB_TOKEN
+
       - name: Set labels
         run: |
           TITLE=$(echo "${{ github.event.pull_request.title }}" | tr '[:upper:]' '[:lower:]')
