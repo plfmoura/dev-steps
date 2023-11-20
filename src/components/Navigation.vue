@@ -2,6 +2,11 @@
      <nav class="nav-container">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
       </nav>
 </template>
 <script>
