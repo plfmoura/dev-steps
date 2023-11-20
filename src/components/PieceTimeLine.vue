@@ -7,7 +7,7 @@
                         {{ slotProps.item.status }}
                     </template>
                     <template #subtitle>
-                        {{ slotProps.item.date }}
+                        {{ slotProps.item.date }}cascsacsa
                     </template>
                     <template #content>
                         <img v-if="slotProps.item.image" :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.item.image}`" :alt="slotProps.item.name" width="200" class="shadow-1" />
