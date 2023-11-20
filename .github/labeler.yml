@@ -1,7 +1,9 @@
-labels:
-- label: "enhancement"
-  title: "feat.*"
-- label: "WIP"
-  title: "^WIP:.*"
-- label: "bug"
-  title: "bug:.*"
+WIP:
+- title: "^WIP:.*"
+
+bug:
+- title: "bug:.*"
+
+enhancement: 
+  - title: "feat.*"
+
