@@ -1,0 +1,25 @@
+name: Approve Pull Request
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Approve PR
+        run: |
+          if [ "${{ github.event.pull_request.merged }}" = "true" ]; then
+            # Remove a label "REVISION" do PR
+            gh pr edit ${{ github.event.number }} --remove-label "REVISION"
+
+            # Adiciona a label "APPROVED" ao PR
+            gh pr edit ${{ github.event.number }} --add-label "APPROVED"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
