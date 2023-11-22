@@ -1,34 +1,19 @@
-name: Auto Label PR
+name: Add Revision Label
 
 on:
   pull_request:
     types:
       - opened
-      - synchronize
 
 jobs:
-  label:
+  add_revision_label:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Check out repository
         uses: actions/checkout@v2
 
-      - name: Set labels
+      - name: Add Revision Label
         run: |
-          TITLE=$(echo "${{ github.event.pull_request.title }}" | tr '[:upper:]' '[:lower:]')
-
-          if [[ $TITLE == *'fix'* ]]; then
-            echo "Applying 'fix' label"
-            gh pr edit --add-label fix
-          fi
-
-          if [[ $TITLE == *'enhancement'* ]]; then
-            echo "Applying 'enhancement' label"
-            gh pr edit --add-label enhancement
-          fi
-
-          if [[ $TITLE == *'wip'* ]]; then
-            echo "Applying 'WIP' label"
-            gh pr edit --add-label WIP
-          fi
+          gh pr edit ${{ github.event.number }} --add-label "REVISION"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
